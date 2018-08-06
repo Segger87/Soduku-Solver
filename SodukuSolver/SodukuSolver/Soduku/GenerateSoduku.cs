@@ -2,7 +2,7 @@
 
 namespace SodukuSolver
 {
-	public class GenerateSoduku : CheckColRowAndBoxForLegalMoves
+	public class GenerateSoduku : SudokuRules
 	{
 		public int[,] RandomSudoku()
 		{

@@ -2,7 +2,7 @@
 
 namespace SodukuSolver
 {
-	public class SudokuSolver : CheckColRowAndBoxForLegalMoves
+	public class SudokuSolver : SudokuRules
 	{
 		public static Tuple<int, int> GridFull = Tuple.Create(9, 9);
 

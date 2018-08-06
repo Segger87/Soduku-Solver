@@ -1,6 +1,6 @@
 ﻿namespace SodukuSolver
 {
-	public abstract class CheckColRowAndBoxForLegalMoves
+	public abstract class SudokuRules
 	{
 		private bool IsTheCurrentNumberAlreadyInTheRow(int[,] sudokuGrid, int row, int num)
 		{
