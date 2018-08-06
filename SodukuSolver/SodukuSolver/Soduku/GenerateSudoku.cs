@@ -4,6 +4,17 @@ namespace SodukuSolver
 {
 	public class GenerateSudoku : SudokuRules
 	{
+		public enum Difficulty { Easy, Medium, Hard, Extreme};
+		private Difficulty _difficulty;
+
+		public GenerateSudoku()
+		{
+			
+		}
+		public GenerateSudoku(Difficulty difficulty)
+		{
+			this._difficulty = difficulty;
+		}
 		public int[,] PreSetSudoku =
 		{
 				{ 0,0,0,0,0,2,1,0,0 },
@@ -33,7 +44,10 @@ namespace SodukuSolver
 				};
 
 			var random = new Random();
-			for (int i = 0; i < 10; i++)
+
+			var level = DifficultyLevel(_difficulty);
+
+			for (int i = 0; i < level; i++)
 			{	
 				var row = random.Next(0, 8);
 				var col = random.Next(0, 8);
@@ -46,6 +60,23 @@ namespace SodukuSolver
 			}
 
 			return emptySudoku;
+		}
+
+		public int DifficultyLevel(Difficulty difficulty)
+		{
+			switch (difficulty)
+			{
+				case Difficulty.Easy:
+				return 12;
+				case Difficulty.Medium:
+					return 10;
+				case Difficulty.Hard:
+					return  8;
+				case Difficulty.Extreme:
+					return 6;
+				default:
+					return 0;
+			}
 		}
 	}
 }

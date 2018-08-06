@@ -78,5 +78,61 @@ namespace SodukuSolver.UnitTests
 			//Assert
 			Assert.AreNotEqual(emptySudoku, randomSoduku);
 		}
+
+		[TestMethod]
+		public void IfDifficultyLevelIsEasy_Sudokuhas12PresetNumbers_IsTrue()
+		{
+			//Arrange
+			var generateSudoku = new GenerateSudoku();
+			const int expected = 12;
+
+			//Act
+			var actual = generateSudoku.DifficultyLevel(GenerateSudoku.Difficulty.Easy);
+
+			//Assert
+			Assert.AreEqual(expected, actual);
+		}
+
+		[TestMethod]
+		public void IfDifficultyLevelIsMedium_Sudokuhas10PresetNumbers_IsTrue()
+		{
+			//Arrange
+			var generateSudoku = new GenerateSudoku();
+			const int expected = 10;
+
+			//Act
+			var actual = generateSudoku.DifficultyLevel(GenerateSudoku.Difficulty.Medium);
+
+			//Assert
+			Assert.AreEqual(expected, actual);
+		}
+
+		[TestMethod]
+		public void IfDifficultyLevelIsHard_Sudokuhas8PresetNumbers_IsTrue()
+		{
+			//Arrange
+			var generateSudoku = new GenerateSudoku();
+			const int expected = 8;
+
+			//Act
+			var actual = generateSudoku.DifficultyLevel(GenerateSudoku.Difficulty.Hard);
+
+			//Assert
+			Assert.AreEqual(expected, actual);
+		}
+
+		[TestMethod]
+		public void IfDifficultyLevelIsExtreme_Sudokuhas6PresetNumbers_IsTrue()
+		{
+			//Arrange
+			var generateSudoku = new GenerateSudoku();
+			const int expected = 6;
+
+			//Act
+			var actual = generateSudoku.DifficultyLevel(GenerateSudoku.Difficulty.Extreme);
+
+			//Assert
+			Assert.AreEqual(expected, actual);
+		}
 	}
 }

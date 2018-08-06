@@ -8,8 +8,6 @@ namespace SodukuSolver
 
 		public void PrintSudokuGrid(int[,] sudokuGrid)
 		{
-			var generateSudoku = new GenerateSudoku();
-
 			Console.WriteLine("__________________");
 			for (int i = 0; i < 9; i++)
 			{
