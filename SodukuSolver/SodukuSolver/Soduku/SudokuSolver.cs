@@ -4,7 +4,7 @@ namespace SodukuSolver
 {
 	public class SudokuSolver : SudokuRules
 	{
-		public static Tuple<int, int> GridFull = Tuple.Create(9, 9);
+		private readonly Tuple<int, int> _gridFull = Tuple.Create(9, 9);
 
 		public void PrintSudokuGrid(int[,] sudokuGrid)
 		{
@@ -47,12 +47,12 @@ namespace SodukuSolver
 				}
 			}
 			//if no more empty spaces the grid is full
-			return GridFull;
+			return _gridFull;
 		}
 
 		public bool SolveSudoku(int[,] sudokuGrid)
 		{
-			if (GridFull == GetEmptyGridLocations(sudokuGrid))
+			if (_gridFull == GetEmptyGridLocations(sudokuGrid))
 			{
 				PrintSudokuGrid(sudokuGrid);
 				return true;
