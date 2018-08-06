@@ -6,7 +6,7 @@ namespace SodukuSolver
 	{
 		public int[,] RandomSudoku()
 		{
-			int[,] sudoku = {
+			int[,] emptySudoku = {
 				{ 0,0,0,0,0,0,0,0,0 },
 				{ 0,0,0,0,0,0,0,0,0 },
 				{ 0,0,0,0,0,0,0,0,0 },
@@ -25,13 +25,13 @@ namespace SodukuSolver
 				var col = random.Next(0, 8);
 				var number = random.Next(1, 9);
 
-				if(IsTheMoveLegal(sudoku, row, col, number))
+				if(IsTheMoveLegal(emptySudoku, row, col, number))
 				{
-					sudoku[row, col] = number;
+					emptySudoku[row, col] = number;
 				}
 			}
 
-			return sudoku;
+			return emptySudoku;
 		}
 	}
 }
