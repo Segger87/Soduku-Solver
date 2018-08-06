@@ -42,8 +42,8 @@ namespace SodukuSolver
 					{
 						Console.ForegroundColor = ConsoleColor.Green;
 						Console.Write(sudokuGrid[i,j]);
+						Console.ResetColor();
 						Console.Write("|");
-						Console.ResetColor();				
 					}
 				}
 				Console.WriteLine("");
