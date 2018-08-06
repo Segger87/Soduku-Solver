@@ -55,9 +55,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SodukuSolver\SodukuSolver.csproj">
+    <ProjectReference Include="..\SodukuSolver\SudokuSolver.csproj">
       <Project>{fcbcdbd6-7ff3-48e6-9006-70c6d0d85d94}</Project>
-      <Name>SodukuSolver</Name>
+      <Name>SudokuSolver</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

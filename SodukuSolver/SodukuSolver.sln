@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SodukuSolver", "SodukuSolver\SodukuSolver.csproj", "{FCBCDBD6-7FF3-48E6-9006-70C6D0D85D94}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SudokuSolver", "SodukuSolver\SudokuSolver.csproj", "{FCBCDBD6-7FF3-48E6-9006-70C6D0D85D94}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SodukuSolver.UnitTests", "SodukuSolver.UnitTests\SodukuSolver.UnitTests.csproj", "{8F2C7B9F-BDC5-4E0B-9AB3-A7BDDC5C6653}"
 EndProject

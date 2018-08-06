@@ -11,7 +11,7 @@ namespace SodukuSolver
 
 		private void Execute()
 		{
-			Console.WriteLine("This is an unsolved Sudoku:");
+			Console.WriteLine("This is the pre-set unsolved Sudoku:");
 			var generateSudoku = new GenerateSudoku();
 			var unsolvedSudoku = new SudokuSolver();
 			unsolvedSudoku.PrintSudokuGrid(generateSudoku.PreSetSudoku);
