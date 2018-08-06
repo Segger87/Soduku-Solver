@@ -84,7 +84,7 @@ namespace SodukuSolver.UnitTests
 		{
 			//Arrange
 			var generateSudoku = new GenerateSudoku();
-			const int expected = 12;
+			const int expected = 20;
 
 			//Act
 			var actual = generateSudoku.DifficultyLevel(GenerateSudoku.Difficulty.Easy);

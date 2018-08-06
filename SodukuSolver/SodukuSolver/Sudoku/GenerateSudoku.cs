@@ -67,7 +67,7 @@ namespace SodukuSolver
 			switch (difficulty)
 			{
 				case Difficulty.Easy:
-				return 12;
+				return 20;
 				case Difficulty.Medium:
 					return 10;
 				case Difficulty.Hard:
