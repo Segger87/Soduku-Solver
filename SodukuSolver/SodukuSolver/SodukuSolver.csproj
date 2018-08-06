@@ -42,8 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Soduku\CheckColRowAndBoxForLegalMoves.cs" />
-    <Compile Include="Soduku\GenerateSoduku.cs" />
+    <Compile Include="Soduku\SudokuRules.cs" />
+    <Compile Include="Soduku\GenerateSudoku.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Soduku\SudokuSolver.cs" />

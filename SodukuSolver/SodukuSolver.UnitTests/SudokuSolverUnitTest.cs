@@ -3,14 +3,14 @@
 namespace SodukuSolver.UnitTests
 {
 	[TestClass]
-	public class SodukuSolverUnitTest
+	public class SudokuSolverUnitTest
 	{
 		[TestMethod]
-		public void IfThereIsAnInvalidSoduku_SolveSoduku_IsFalse()
+		public void IfThereIsAnInvalidSoduku_SolveSudoku_IsFalse()
 		{
 			//Arrange
 			//notice there are two 2's directly next to each other which makes it unsolvable
-			int[,] wrongSoduku = {
+			int[,] wrongSudoku = {
 				{ 0,0,0,0,0,2,2,0,0 },
 				{ 0,0,4,0,0,8,7,0,0 },
 				{ 0,2,0,3,0,0,9,0,0 },
@@ -24,18 +24,18 @@ namespace SodukuSolver.UnitTests
 
 			//Act
 			var solver = new SudokuSolver();
-			var expected = solver.SolveSoduku(wrongSoduku);
+			var expected = solver.SolveSudoku(wrongSudoku);
 
 			//Assert
 			Assert.IsFalse(expected);
 		}
 
 		[TestMethod]
-		public void IfThereIsAValidSoduku_SolveSoduku_IsTrue()
+		public void IfThereIsAValidSoduku_SolveSudoku_IsTrue()
 		{
 			//Arrange
 			//notice there are two 2's directly next to each other which makes it unsolvable
-			int[,] soduku = {
+			int[,] sudoku = {
 				{ 0,0,0,0,0,2,1,0,0 },
 				{ 0,0,4,0,0,8,7,0,0 },
 				{ 0,2,0,3,0,0,9,0,0 },
@@ -49,14 +49,14 @@ namespace SodukuSolver.UnitTests
 
 			//Act
 			var solver = new SudokuSolver();
-			var expected = solver.SolveSoduku(soduku);
+			var expected = solver.SolveSudoku(sudoku);
 
 			//Assert
 			Assert.IsTrue(expected);
 		}
 
 		[TestMethod]
-		public void RandomSoduku_EmptySoduku_AreNotEqual()
+		public void RandomSoduku_EmptySudoku_AreNotEqual()
 		{
 			//Arrange
 			int[,] emptySudoku = {
@@ -72,7 +72,7 @@ namespace SodukuSolver.UnitTests
 				};
 
 			//Act
-			var newSudoku = new GenerateSoduku();
+			var newSudoku = new GenerateSudoku();
 			var randomSoduku = newSudoku.RandomSudoku();
 
 			//Assert

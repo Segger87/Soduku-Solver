@@ -6,35 +6,29 @@ namespace SodukuSolver
 	{
 		static void Main(string[] args)
 		{
-			int[,] sudoku = {
-				{ 0,0,0,0,0,2,1,0,0 },
-				{ 0,0,4,0,0,8,7,0,0 },
-				{ 0,2,0,3,0,0,9,0,0 },
-				{ 6,0,2,0,0,3,0,4,0 },
-				{ 0,0,0,0,0,0,0,0,0 },
-				{ 0,5,0,6,0,0,3,0,1 },
-				{ 0,0,3,0,0,5,0,8,0 },
-				{ 0,0,8,2,0,0,5,0,0 },
-				{ 0,0,9,7,0,0,0,0,0 }
-				};
+			new Program().Execute();
+		}
 
+		private void Execute()
+		{
 			Console.WriteLine("This is an unsolved Sudoku:");
+			var generateSudoku = new GenerateSudoku();
 			var unsolvedSudoku = new SudokuSolver();
-			unsolvedSudoku.PrintSudokuGrid(sudoku);
+			unsolvedSudoku.PrintSudokuGrid(generateSudoku.PreSetSudoku);
 
 			Console.WriteLine("This is the solution:");
 			var completedSudoku = new SudokuSolver();
-			completedSudoku.SolveSoduku(sudoku);
+			completedSudoku.SolveSudoku(generateSudoku.PreSetSudoku);
 
-			var newSudoku = new GenerateSoduku();
+			var newSudoku = new GenerateSudoku();
 			var randomSoduku = newSudoku.RandomSudoku();
 
-			Console.WriteLine("This is a randomly generated unsolved Soduku");
+			Console.WriteLine("This is a randomly generated unsolved Soduku:");
 			unsolvedSudoku.PrintSudokuGrid(randomSoduku);
 
 			Console.WriteLine("This is the solution:");
 			var completedRandomSudoku = new SudokuSolver();
-			completedRandomSudoku.SolveSoduku(randomSoduku);
+			completedRandomSudoku.SolveSudoku(randomSoduku);
 			Console.ReadLine();
 		}
 	}

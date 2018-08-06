@@ -8,6 +8,8 @@ namespace SodukuSolver
 
 		public void PrintSudokuGrid(int[,] sudokuGrid)
 		{
+			var generateSudoku = new GenerateSudoku();
+
 			Console.WriteLine("__________________");
 			for (int i = 0; i < 9; i++)
 			{
@@ -48,7 +50,7 @@ namespace SodukuSolver
 			return GridFull;
 		}
 
-		public bool SolveSoduku(int[,] sudokuGrid)
+		public bool SolveSudoku(int[,] sudokuGrid)
 		{
 			if (GridFull == GetEmptyGridLocations(sudokuGrid))
 			{
@@ -69,7 +71,7 @@ namespace SodukuSolver
 					sudokuGrid[row, col] = num;
 
 					//recursively call the function until all number placements are valid
-					if (SolveSoduku(sudokuGrid))
+					if (SolveSudoku(sudokuGrid))
 					{
 						return true;
 					}

@@ -2,8 +2,22 @@
 
 namespace SodukuSolver
 {
-	public class GenerateSoduku : SudokuRules
+	public class GenerateSudoku : SudokuRules
 	{
+		public int[,] PreSetSudoku =
+		{
+				{ 0,0,0,0,0,2,1,0,0 },
+				{ 0,0,4,0,0,8,7,0,0 },
+				{ 0,2,0,3,0,0,9,0,0 },
+				{ 6,0,2,0,0,3,0,4,0 },
+				{ 0,0,0,0,0,0,0,0,0 },
+				{ 0,5,0,6,0,0,3,0,1 },
+				{ 0,0,3,0,0,5,0,8,0 },
+				{ 0,0,8,2,0,0,5,0,0 },
+				{ 0,0,9,7,0,0,0,0,0 }
+				};
+	
+	
 		public int[,] RandomSudoku()
 		{
 			int[,] emptySudoku = {
