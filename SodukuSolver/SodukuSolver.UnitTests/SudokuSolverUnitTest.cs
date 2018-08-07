@@ -6,7 +6,7 @@ namespace SodukuSolver.UnitTests
 	public class SudokuSolverUnitTest
 	{
 		[TestMethod]
-		public void IfThereIsAnInvalidSoduku_SolveSudoku_IsFalse()
+		public void IfThereIsAnInvalidSudoku_SolveSudoku_IsFalse()
 		{
 			//Arrange
 			//notice there are two 2's directly next to each other which makes it unsolvable
@@ -31,10 +31,9 @@ namespace SodukuSolver.UnitTests
 		}
 
 		[TestMethod]
-		public void IfThereIsAValidSoduku_SolveSudoku_IsTrue()
+		public void IfThereIsAValidSudoku_SolveSudoku_IsTrue()
 		{
 			//Arrange
-			//notice there are two 2's directly next to each other which makes it unsolvable
 			int[,] sudoku = {
 				{ 0,0,0,0,0,2,1,0,0 },
 				{ 0,0,4,0,0,8,7,0,0 },
@@ -80,7 +79,7 @@ namespace SodukuSolver.UnitTests
 		}
 
 		[TestMethod]
-		public void IfDifficultyLevelIsEasy_Sudokuhas12PresetNumbers_IsTrue()
+		public void IfDifficultyLevelIsEasy_Sudokuhas20PresetNumbers_IsTrue()
 		{
 			//Arrange
 			var generateSudoku = new GenerateSudoku();
@@ -94,11 +93,11 @@ namespace SodukuSolver.UnitTests
 		}
 
 		[TestMethod]
-		public void IfDifficultyLevelIsMedium_Sudokuhas10PresetNumbers_IsTrue()
+		public void IfDifficultyLevelIsMedium_Sudokuhas12PresetNumbers_IsTrue()
 		{
 			//Arrange
 			var generateSudoku = new GenerateSudoku();
-			const int expected = 10;
+			const int expected = 12;
 
 			//Act
 			var actual = generateSudoku.DifficultyLevel(GenerateSudoku.Difficulty.Medium);
