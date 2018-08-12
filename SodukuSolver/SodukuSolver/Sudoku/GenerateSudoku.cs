@@ -7,8 +7,7 @@ namespace SodukuSolver
 		public enum Difficulty { Easy, Medium, Hard, Extreme};
 		private Difficulty _difficulty;
 
-		public int[,] PreSetSudoku =
-	{
+		public int[,] PreSetSudoku ={
 				{ 0,0,0,0,0,2,1,0,0 },
 				{ 0,0,4,0,0,8,7,0,0 },
 				{ 0,2,0,3,0,0,9,0,0 },
@@ -20,11 +19,11 @@ namespace SodukuSolver
 				{ 0,0,9,7,0,0,0,0,0 }
 		};
 
-
 		public GenerateSudoku()
 		{
 			
 		}
+
 		public GenerateSudoku(Difficulty difficulty)
 		{
 			this._difficulty = difficulty;
@@ -45,7 +44,6 @@ namespace SodukuSolver
 				};
 
 			var random = new Random();
-
 			var level = DifficultyLevel(_difficulty);
 
 			for (int i = 0; i < level; i++)
